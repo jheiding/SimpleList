@@ -77,14 +77,15 @@ public class SimpleListV2
            if(count > size)// Sees if the List if full of Elements
                  {
                       size += (size/2); // increases the max size by 50%
-                      TemporaryArray = new int [size];//creates a temporary array with the new size to hold the data
-                      // so we can change the allowed memory for list;
+                      TemporaryArray = new int [size];//creates a temporary array with the new 
+                      //size to hold the data so we can change the allowed memory for list;
                       for (int index = 0; index < list.length; index++)
                       {// moves the elements from list into 
                      	 //the TemporaryArray
                      	 TemporaryArray[index] = list[index];
                        }
-                      list = TemporaryArray;// changes the max size of list and moves everything back into list
+                      list = TemporaryArray;// changes the max size of list and moves everything 
+                      //back into list
                       
                  }
            list[count-1]=number;
@@ -105,22 +106,8 @@ public class SimpleListV2
             
         	}
         	count--;
-        	position = this.search(number); // updates position of the number// Subtracting 1 from the count to keep track of how many elements are in the list
-        if(size > count-size/4)
-        {
-        	 int[] TemporaryArray;// Declares a Temporary Array for moving data out of list;
-        	size -= size/4;
-        	TemporaryArray = new int [size];//creates a temporary array with the new size to hold the data
-            // so we can change the allowed memory for list;
-            for (int index = 0; index < size; index++)
-            {// moves the elements from list into 
-           	 //the TemporaryArray
-           	 TemporaryArray[index] = list[index];
-           	 
-             }
-            list = TemporaryArray;// copys all elements back into the adjusted size list
-            System.out.println(list.length);
-        }
+        	// Subtracting 1 from the count to keep track of how many elements are in the list
+       
     }
     /*
      * Searches though the list to find the position element past in
