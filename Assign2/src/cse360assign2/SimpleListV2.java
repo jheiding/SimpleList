@@ -107,7 +107,20 @@ public class SimpleListV2
         	}
         	count--;
         	// Subtracting 1 from the count to keep track of how many elements are in the list
-       
+        	if(size > count-size/4)
+	    	{
+	    		int[] TemporaryArray;// Declares a Temporary Array for moving data out of list;
+	    		size -= size/4;
+	    		TemporaryArray = new int [size];//creates a temporary array with the new size to hold the data
+	    		// so we can change the allowed memory for list;
+	            	for (int index = 0; index < size; index++)
+	            	{// moves the elements from list into 
+	           	 		//the TemporaryArray
+	            		TemporaryArray[index] = list[index];
+   	             	}
+	            	list = TemporaryArray;// copies all elements back into the adjusted size list
+	            
+	    	}
     }
     /*
      * Searches though the list to find the position element past in
