@@ -158,7 +158,12 @@ public class SimpleListV2
     // returns the first element of the list
     public int first()
     {
-    	return list[0];
+    	int firstspos = list[0];// gets the first position of list
+    	if(count == 0)// if the list is empty
+    	{
+    		firstspos = -1;
+    	}
+    	return firstspos;
     }
     /*
      * Creates the String of the list
