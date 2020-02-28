@@ -161,7 +161,7 @@ public class SimpleListV2
     	int firstspos = list[0];// gets the first position of list
     	if(count == 0)// if the list is empty
     	{
-    		firstspos = -1;
+    		firstspos = -1;// sets first position value to -1
     	}
     	return firstspos;
     }
